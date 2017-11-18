@@ -1,2 +1,68 @@
-<h1>Welcome to the superhero page!</h1>
-<p>This is where it all begins!</p>
+
+
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title"></h3><%= link_to 'Click Here To Generate A New Superhero', root_path %></h3>
+</div>
+
+<div class="panel-body">
+</div>
+ <div class="row">
+  </div>
+<div class="col-md-4">
+<img src="<%=@avatar_image%>">
+<br/><br/>
+<div class="panel-footer"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div> 
+</div>
+
+<div class="col-md-4">
+<h3>
+    Super Hero Name:
+ </h3>
+ 
+<h3>
+  <span class="green"><%= @hero_prefix + ' ' + @hero_name %></span>
+  </h3>
+  
+<h3>
+    Your Super Power: 
+  </h3>
+  
+<h3>
+  <span class="green"><%= @hero_power %></span>
+  </h3>
+  <br/><br/>
+
+<h4>
+    Your undercover day job is:
+  </h4>
+  
+<h4>
+  <span class="corp_green"><%= @corp_job %></span>
+  </h3>
+  
+<h4>
+    Your corporate power is: 
+  </h4>
+  
+<h4>
+    <span class="corp_green"><%= @corp_power %></span> 
+  </h3>
+</div>
+ 
+<div class="col-md-4">
+  </div>
+       
+      
+  
+     
+     
+          
+     
+  
+
+
+
+
+ 

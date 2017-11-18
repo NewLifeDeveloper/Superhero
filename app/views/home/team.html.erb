@@ -1,2 +1,72 @@
-<h1>This is my team page!</h1>
-<p>This is the best team in the galaxy!</p>
+<h1>This is the team page!</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title green">How Many Team Members Do You Want?  <%= @team_number %></h3>
+    
+    <div class="panel-footer">
+<div class="panel-body">
+      <div class="row">
+        
+         <br/>
+          <div>
+             
+        <div class=<div class="col-md-4">
+      <%= form_tag 'home_team_path', :method => 'POST' do %>
+      <%= select_tag(:team_number, options_for_select([
+                                      ['1', 1],
+                                      ['2', 2],
+                                      ['3', 3],
+                                      ['4', 4],
+                                      ['5', 5],
+                                      ['6', 6],
+                                      ['7', 7],
+                                      ['8', 8],
+                                      ['9', 9],
+                                      ['10',10],
+                                      ]),class: 'form-contol') %>
+                <br/>                      
+           
+       </div>
+         <br/>
+   <br/>
+     
+        <div class=<div class="col-md-4">
+       <%= submit_tag 'Build your team!', class: "btn btn-default" %>
+            
+            
+            <% end %>
+            
+    </div>
+   
+            
+                                      
+       
+                                      
+                                          <div class=<div class="col-md-4">
+    </div>
+        
+   
+               
+       
+                                      
+                                                
+                                                 
+                                                 
+    
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+      
+                     
+    
+    
+  
+  
+   
