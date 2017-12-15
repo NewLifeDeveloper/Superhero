@@ -2,25 +2,23 @@
 <html>
 <head>
   <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 </head>
 <body>
   
-<%= render 'home/navbar' %>
+  <%= render 'home/navbar' %>
 
- <div class="container">
-  
-<%= yield %>
+<div class="container">
+  <%= yield %>
 </div>
 
-<br/><br/>
-<br/><br/>
-</body>
+  </body>
+
+<br/><br/><br/><br/>
 <center>
-Copyright © JohnElder.org - All Rights Reserved
+Copyright © JohnElder.org - All Rights Reserved   
 </center>
 </html>
-</div>
