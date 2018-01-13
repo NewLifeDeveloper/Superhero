@@ -30,6 +30,7 @@ class HomeController < ApplicationController
     else @bg == 2
     @background = "bg2"
     end
+    
     @avatar_image = Faker::Avatar.image(@rand_numb, "300x300", "png",  @set, @background)
     end
     
@@ -37,7 +38,7 @@ class HomeController < ApplicationController
     end
   
     def team
-      @team_number = params[:team_number]
+      @team_number = params[:team_number].to_i
     end
   
     
@@ -46,7 +47,7 @@ class HomeController < ApplicationController
     def thirdpage
     end
     
-  end
+end 
   
    
   

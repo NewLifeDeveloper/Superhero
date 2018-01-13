@@ -3,27 +3,27 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title green"> 
-        <% if @team_number %>
-        Your team members!
+        <% if @team_number > 0 %>
+            Your have selected <%= @team_number %> team members!
         <% else %>
-        How Many Team Members Do You Want?
-        <% end %></h3>
+            How Many Team Members Do You Want?
+        </h3>
     </div>
+    <% end %>
     <div class="panel-body">
     <br/>
-    
-        <% if @team_number %>
-        <%= render 'home/show_team' %>
+        <% if @team_number > 0 %>
+            <%= render 'home/show_team' %>
         <% else %>
-        <%= render 'home/create_team' %>
-        <% end %>
+            <%= render 'home/create_team' %>
+        
+        
     </div>
     <br/>
+    <% end %>
+       
     
     
-    <div class="panel-footer">
-    </div>    
-    </div>
     
         
  
