@@ -1,43 +1,66 @@
   <% @team_number.times do %>  
    
          <div class="panel-body">
-         <div class="row">
+          <div class="row">
           
             <div class="col-md-4">
               <img src="<%=@avatar_image%>">
-            <br/><br/>
+             <% rand_numb = rand(1..100) %>
+             <% rand_setting = rand(1..4) %>
+             <% bg = rand(1..2) %>
+          
+            
+              <% if rand_setting == 1 %>
+                <% set = "set1" %>
+              <% elsif rand_setting == 2 %>
+                  <% set = "set2" %>
+              <% elsif rand_setting == 3 %>
+                  <% set = "set3" %>
+              <% else rand_setting == 4 %>
+                  <% set = "set4" %>
+          <% end %>
+               
+                
+              <% if bg == 1 %>
+                <% background = "bg1" %>
+              <% else bg == 2 %>
+                <% background = "bg2" %>
+          <% end %>
+            
+             <% avatar_image = Faker::Avatar.image(rand_numb, "300x300", "png",  set, background) %> 
+             
+           <br/><br/>
             </div>
 
             <div class="col-md-4">
             <h3> Your Superhero Name:
-            <div><span class="green"> <%= @hero_prefix +' '+ @hero_name %> </span></h3>
+            <div><span class="green"> <%= Faker::Superhero.name %> </span></h3>
             <h3>Your Super Power:
-            <div><span class="green"> <%= @hero_power %> </span></h3>
+            <div><span class="green"> <%= Faker::Superhero.power %> </span></h3>
             <br/>
             <div><h4>Your undercover day job is:
-            <div><h4><span class="corp_green"> <%= @corp_job %> </span></h4>
+            <div><h4><span class="corp_green"> <%= Faker::Name.title %> </span></h4>
             <h4>Your corporate power is:
-            <div><h4><span class="corp_green"> <%= @corp_power %> </span></h4>
+            <div><h4><span class="corp_green"> <%= Faker::Company.bs.titleize %> </span></h4>
             </div>
             </div>
             </div>
             </div>
             </div>
             </div>
+        <% end %>
             
               <div class="col-md-4">
               </div>
-              
-              <% end %>
-              
+             
               <div class="panel-footer">
               <%= link_to 'Create A new team', home_team_path %>
               </div>
-              
+           
               </div>
               </div>
                 
   
 
-        
+       
           
